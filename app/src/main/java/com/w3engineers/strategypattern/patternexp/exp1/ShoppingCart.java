@@ -1,4 +1,4 @@
-package com.w3engineers.pattern1.exp1;
+package com.w3engineers.strategypattern.patternexp.exp1;
 
 import java.util.ArrayList;
 import java.util.List;

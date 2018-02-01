@@ -1,4 +1,4 @@
-package com.w3engineers.pattern1.exp1;
+package com.w3engineers.strategypattern.patternexp.exp2;
 
 /*
 * ****************************************************************************
@@ -19,20 +19,14 @@ package com.w3engineers.pattern1.exp1;
 * * Last Reviewed by : SUDIPTA KUMAR PAIK on 2/1/18.
 * ****************************************************************************
 */
-public class Item {
-    private String upcCode;
-    private int price;
+public class OperationMultiply implements Strategy{
+   @Override
+   public int doOperation(int num1, int num2) {
+      return num1 * num2;
+   }
 
-    public Item(String upc, int cost) {
-        this.upcCode = upc;
-        this.price = cost;
-    }
-
-    public String getUpcCode() {
-        return upcCode;
-    }
-
-    public int getPrice() {
-        return price;
-    }
+   @Override
+   public int doOperation() {
+      return 0;
+   }
 }

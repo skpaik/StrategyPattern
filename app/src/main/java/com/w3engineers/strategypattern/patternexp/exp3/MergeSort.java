@@ -1,4 +1,4 @@
-package com.w3engineers.pattern1.exp3;
+package com.w3engineers.strategypattern.patternexp.exp3;
 
 import java.util.List;
 
@@ -21,6 +21,9 @@ import java.util.List;
 * * Last Reviewed by : SUDIPTA KUMAR PAIK on 2/1/18.
 * ****************************************************************************
 */
-public interface Strategy {
-    void sort(List<String> list);
+public class MergeSort implements Strategy {
+    @Override
+    public void sort(List<String> list) {
+        System.out.println("MergeSorted list Count: " + list.size());
+    }
 }

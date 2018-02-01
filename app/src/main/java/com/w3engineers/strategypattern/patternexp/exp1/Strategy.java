@@ -1,4 +1,4 @@
-package com.w3engineers.pattern1.exp2;
+package com.w3engineers.strategypattern.patternexp.exp1;
 
 /*
 * ****************************************************************************
@@ -19,14 +19,6 @@ package com.w3engineers.pattern1.exp2;
 * * Last Reviewed by : SUDIPTA KUMAR PAIK on 2/1/18.
 * ****************************************************************************
 */
-public class OperationMultiply implements Strategy{
-   @Override
-   public int doOperation(int num1, int num2) {
-      return num1 * num2;
-   }
-
-   @Override
-   public int doOperation() {
-      return 0;
-   }
+public interface Strategy {
+    void pay(int amount);
 }

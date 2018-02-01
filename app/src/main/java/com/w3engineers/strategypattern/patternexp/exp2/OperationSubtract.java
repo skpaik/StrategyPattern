@@ -1,6 +1,4 @@
-package com.w3engineers.pattern1.exp3;
-
-import java.util.List;
+package com.w3engineers.strategypattern.patternexp.exp2;
 
 /*
 * ****************************************************************************
@@ -21,9 +19,14 @@ import java.util.List;
 * * Last Reviewed by : SUDIPTA KUMAR PAIK on 2/1/18.
 * ****************************************************************************
 */
-public class ShellSort implements Strategy {
-    @Override
-    public void sort(List<String> list) {
-        System.out.println("ShellSorted Count: " + list.size());
-    }
+public class OperationSubtract implements Strategy{
+   @Override
+   public int doOperation(int num1, int num2) {
+      return num1 - num2;
+   }
+
+   @Override
+   public int doOperation() {
+      return 0;
+   }
 }

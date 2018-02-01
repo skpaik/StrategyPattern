@@ -1,4 +1,4 @@
-package com.w3engineers.pattern1.exp1;
+package com.w3engineers.strategypattern.patternexp.exp1;
 
 /*
 * ****************************************************************************
@@ -19,18 +19,22 @@ package com.w3engineers.pattern1.exp1;
 * * Last Reviewed by : SUDIPTA KUMAR PAIK on 2/1/18.
 * ****************************************************************************
 */
-public class PaypalStrategy implements Strategy {
+public class CreditCardStrategy implements Strategy {
 
-    private String emailId;
-    private String password;
+    private String name;
+    private String cardNumber;
+    private String cvv;
+    private String dateOfExpiry;
 
-    public PaypalStrategy(String email, String pwd) {
-        this.emailId = email;
-        this.password = pwd;
+    public CreditCardStrategy(String nm, String ccNum, String cvv, String expiryDate) {
+        this.name = nm;
+        this.cardNumber = ccNum;
+        this.cvv = cvv;
+        this.dateOfExpiry = expiryDate;
     }
 
     @Override
     public void pay(int amount) {
-        System.out.println(amount + " paid using Paypal.");
+        System.out.println(amount + " paid with credit/debit card");
     }
 }

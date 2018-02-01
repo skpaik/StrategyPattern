@@ -1,4 +1,6 @@
-package com.w3engineers.pattern1.exp2;
+package com.w3engineers.strategypattern.patternexp.exp3;
+
+import java.util.List;
 
 /*
 * ****************************************************************************
@@ -19,7 +21,9 @@ package com.w3engineers.pattern1.exp2;
 * * Last Reviewed by : SUDIPTA KUMAR PAIK on 2/1/18.
 * ****************************************************************************
 */
-public interface Strategy {
-    int doOperation(int num1, int num2);
-    int doOperation();
+public class QuickSort implements Strategy {
+    @Override
+    public void sort(List<String> list) {
+        System.out.println("QuickSorted Count: " + list.size());
+    }
 }

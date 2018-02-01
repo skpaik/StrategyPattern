@@ -1,4 +1,4 @@
-package com.w3engineers.pattern1.exp1;
+package com.w3engineers.strategypattern.patternexp.exp2;
 
 /*
 * ****************************************************************************
@@ -20,5 +20,6 @@ package com.w3engineers.pattern1.exp1;
 * ****************************************************************************
 */
 public interface Strategy {
-    void pay(int amount);
+    int doOperation(int num1, int num2);
+    int doOperation();
 }

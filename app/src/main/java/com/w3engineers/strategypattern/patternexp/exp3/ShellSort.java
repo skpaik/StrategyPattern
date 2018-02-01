@@ -1,4 +1,6 @@
-package com.w3engineers.pattern1.exp2;
+package com.w3engineers.strategypattern.patternexp.exp3;
+
+import java.util.List;
 
 /*
 * ****************************************************************************
@@ -19,22 +21,9 @@ package com.w3engineers.pattern1.exp2;
 * * Last Reviewed by : SUDIPTA KUMAR PAIK on 2/1/18.
 * ****************************************************************************
 */
-public class OperationAdd implements Strategy {
-    private int mNum1;
-    private int mNum2;
-
-    public OperationAdd(int num1, int num2) {
-        mNum1 = num1;
-        mNum2 = num2;
-    }
-
+public class ShellSort implements Strategy {
     @Override
-    public int doOperation(int num1, int num2) {
-        return num1 + num2;
-    }
-
-    @Override
-    public int doOperation() {
-        return mNum1 + mNum2;
+    public void sort(List<String> list) {
+        System.out.println("ShellSorted Count: " + list.size());
     }
 }

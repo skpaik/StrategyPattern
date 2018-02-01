@@ -1,6 +1,4 @@
-package com.w3engineers.pattern1.exp3;
-
-import java.util.List;
+package com.w3engineers.strategypattern.patternexp.exp1;
 
 /*
 * ****************************************************************************
@@ -21,9 +19,20 @@ import java.util.List;
 * * Last Reviewed by : SUDIPTA KUMAR PAIK on 2/1/18.
 * ****************************************************************************
 */
-public class QuickSort implements Strategy {
-    @Override
-    public void sort(List<String> list) {
-        System.out.println("QuickSorted Count: " + list.size());
+public class Item {
+    private String upcCode;
+    private int price;
+
+    public Item(String upc, int cost) {
+        this.upcCode = upc;
+        this.price = cost;
+    }
+
+    public String getUpcCode() {
+        return upcCode;
+    }
+
+    public int getPrice() {
+        return price;
     }
 }

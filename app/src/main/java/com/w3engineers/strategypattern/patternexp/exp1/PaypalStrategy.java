@@ -1,4 +1,4 @@
-package com.w3engineers.pattern1.exp2;
+package com.w3engineers.strategypattern.patternexp.exp1;
 
 /*
 * ****************************************************************************
@@ -19,14 +19,18 @@ package com.w3engineers.pattern1.exp2;
 * * Last Reviewed by : SUDIPTA KUMAR PAIK on 2/1/18.
 * ****************************************************************************
 */
-public class OperationSubtract implements Strategy{
-   @Override
-   public int doOperation(int num1, int num2) {
-      return num1 - num2;
-   }
+public class PaypalStrategy implements Strategy {
 
-   @Override
-   public int doOperation() {
-      return 0;
-   }
+    private String emailId;
+    private String password;
+
+    public PaypalStrategy(String email, String pwd) {
+        this.emailId = email;
+        this.password = pwd;
+    }
+
+    @Override
+    public void pay(int amount) {
+        System.out.println(amount + " paid using Paypal.");
+    }
 }

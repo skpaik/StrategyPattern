@@ -1,7 +1,4 @@
-package com.w3engineers.pattern1.exp3;
-
-import java.util.ArrayList;
-import java.util.List;
+package com.w3engineers.strategypattern.patternexp.exp2;
 
 /*
 * ****************************************************************************
@@ -22,23 +19,18 @@ import java.util.List;
 * * Last Reviewed by : SUDIPTA KUMAR PAIK on 2/1/18.
 * ****************************************************************************
 */
-public class SortedList {
-    private List<String> _list = new ArrayList<>();
+public class StrategyContext {
     private Strategy strategy;
 
-    public void setStrategy(Strategy strategy) {
+    public StrategyContext(Strategy strategy) {
         this.strategy = strategy;
     }
 
-    public void add(String name) {
-        _list.add(name);
+    public int executeStrategy(int num1, int num2) {
+        return strategy.doOperation(num1, num2);
     }
 
-    public void sort() {
-        strategy.sort(_list);
-
-        for (String name : _list) {
-             System.out.println(name);
-        }
+    public int executeStrategy() {
+        return strategy.doOperation();
     }
 }
